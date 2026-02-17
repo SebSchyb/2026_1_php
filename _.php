@@ -24,6 +24,21 @@ function _validate_user_email(){
     return $user_email;
 }
 
+define("user_username_min", 6);
+define("user_username_max", 50);
+function _validate_user_username(){
+    $user_username = $_POST["user_username"] ??  "";
+    $user_username = trim($user_username);
+    if(strlen($user_username) < user_username_min){
+        throw new Exception("username must be at least ".user_username_min." characters long", 400);
+    }
+    if(strlen($user_username) > user_username_max){
+        throw new Exception("username must be max ".user_username_max." characters long", 400);
+    }
+    return $user_username;
+}
+
+
 // ##############################
 define("user_password_min", 6);
 define("user_password_max", 50);
