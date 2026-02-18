@@ -21,7 +21,7 @@
             item_pk: "1"
         }).addTo(map);
         marker.on('click', function (e) {
-            alert("Marker ID: " + this.options.item_pk);
+            //alert("Marker ID: " + this.options.item_pk);
         });
         
         
@@ -29,7 +29,7 @@
             item_pk: "2"
         }).addTo(map);
         marker.on('click', function (e) {
-            alert("Marker ID: " + this.options.item_pk);
+            //alert("Marker ID: " + this.options.item_pk);
         });           
  
     </script>
